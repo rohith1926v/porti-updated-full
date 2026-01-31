@@ -1,9 +1,10 @@
 import React from 'react';
 import { RESUME_DATA } from '../constants';
-import { Github, Linkedin, Twitter, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { profile } = RESUME_DATA;
 
   return (
     <footer className="bg-black text-white pt-24 pb-12 border-t border-white/10">
@@ -14,22 +15,30 @@ const Footer: React.FC = () => {
                     RV.
                 </h2>
                 <div className="flex flex-col gap-1 font-mono text-zinc-500">
-                    <span>{RESUME_DATA.profile.location}</span>
-                    <a href={`mailto:${RESUME_DATA.profile.email}`} className="hover:text-white transition-colors">
-                        {RESUME_DATA.profile.email}
+                    <span>{profile.location}</span>
+                    <a href={`mailto:${profile.email}`} className="hover:text-white transition-colors">
+                        {profile.email}
                     </a>
+                    <span>{profile.phone}</span>
                 </div>
             </div>
             
             <div className="mt-12 md:mt-0 flex flex-col gap-4">
-                <a href="#" className="flex items-center gap-3 text-2xl font-bold hover:text-lime-400 transition-colors group">
+                <a 
+                  href={profile.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-2xl font-bold hover:text-lime-400 transition-colors group"
+                >
                     GITHUB <ArrowUp className="w-5 h-5 rotate-45 group-hover:rotate-90 transition-transform" />
                 </a>
-                <a href="#" className="flex items-center gap-3 text-2xl font-bold hover:text-blue-400 transition-colors group">
+                <a 
+                  href={profile.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-2xl font-bold hover:text-blue-400 transition-colors group"
+                >
                     LINKEDIN <ArrowUp className="w-5 h-5 rotate-45 group-hover:rotate-90 transition-transform" />
-                </a>
-                <a href="#" className="flex items-center gap-3 text-2xl font-bold hover:text-sky-400 transition-colors group">
-                    TWITTER <ArrowUp className="w-5 h-5 rotate-45 group-hover:rotate-90 transition-transform" />
                 </a>
             </div>
         </div>

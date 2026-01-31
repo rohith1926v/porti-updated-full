@@ -34,12 +34,22 @@ const ProjectDetails: React.FC = () => {
                 </h1>
                 <div className="flex gap-4">
                     {project.repoLink && (
-                        <a href={project.repoLink} className="p-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors">
+                        <a 
+                          href={project.repoLink}
+                          target="_blank"
+                          rel="noopener noreferrer" 
+                          className="p-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors"
+                        >
                             <Github className="w-5 h-5" />
                         </a>
                     )}
                     {project.demoLink && (
-                        <a href={project.demoLink} className="p-3 rounded-full bg-lime-400 text-black hover:bg-lime-300 transition-colors">
+                        <a 
+                          href={project.demoLink}
+                          target="_blank"
+                          rel="noopener noreferrer" 
+                          className="p-3 rounded-full bg-lime-400 text-black hover:bg-lime-300 transition-colors"
+                        >
                             <ExternalLink className="w-5 h-5" />
                         </a>
                     )}

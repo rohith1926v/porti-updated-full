@@ -6,7 +6,11 @@ export const RESUME_DATA: ResumeData = {
     email: "rohithvirlanki1926@gmail.com",
     phone: "+91 8639353615",
     location: "Visakhapatnam, India",
-    summary: "A Bachelor of Computer Science graduate with strong technical competencies in programming, databases, and software engineering. Fast learner, practical project experience, and committed to developing clean, efficient, and user-centred solutions."
+    summary: "A Bachelor of Computer Science graduate with strong technical competencies in programming, databases, and software engineering. Fast learner, practical project experience, and committed to developing clean, efficient, and user-centred solutions.",
+    social: {
+      github: "https://github.com/rohith1926v",
+      linkedin: "https://www.linkedin.com/in/rohith-v-85a051265"
+    }
   },
   education: [
     {
@@ -71,7 +75,7 @@ export const RESUME_DATA: ResumeData = {
         "Created a reusable configuration template for rapid deployment in similar subnets."
       ],
       technologies: ["iptables", "pfSense", "Network Security", "Linux", "Bash Scripting"],
-      repoLink: "#"
+      repoLink: "https://github.com/rohith1926v"
     },
     {
       id: "ids-ips-system",
@@ -90,7 +94,7 @@ export const RESUME_DATA: ResumeData = {
         "Established a comprehensive threat log archive for forensic analysis."
       ],
       technologies: ["IDS/IPS", "Snort", "Traffic Analysis", "Cyber Security", "Python"],
-      repoLink: "#"
+      repoLink: "https://github.com/rohith1926v"
     }
   ],
   certificates: [

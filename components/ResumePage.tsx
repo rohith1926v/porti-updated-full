@@ -1,6 +1,6 @@
 import React from 'react';
 import { RESUME_DATA } from '../constants';
-import { Download, Mail, MapPin, Phone, Printer } from 'lucide-react';
+import { Download, Mail, MapPin, Phone, Printer, Github, Linkedin } from 'lucide-react';
 
 const ResumePage: React.FC = () => {
   const { profile } = RESUME_DATA;
@@ -25,18 +25,26 @@ const ResumePage: React.FC = () => {
           <h1 className="text-4xl font-bold uppercase tracking-wider mb-2">{profile.name}</h1>
           <p className="text-lg font-mono mb-4">Cyber Security Engineer | Full Stack Developer</p>
           
-          <div className="flex flex-wrap gap-4 text-sm font-medium">
-            <div className="flex items-center gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4 text-sm font-medium">
+            <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
               {profile.email}
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
               {profile.phone}
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
               {profile.location}
+            </div>
+             <div className="flex items-center gap-2">
+              <Github className="w-4 h-4" />
+              <a href={profile.social.github} target="_blank" rel="noopener noreferrer" className="hover:underline">github.com/rohith1926v</a>
+            </div>
+             <div className="flex items-center gap-2">
+              <Linkedin className="w-4 h-4" />
+              <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:underline">linkedin.com/in/rohith-v...</a>
             </div>
           </div>
         </header>

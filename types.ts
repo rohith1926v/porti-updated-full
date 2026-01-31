@@ -1,9 +1,16 @@
+export interface Social {
+  github: string;
+  linkedin: string;
+  twitter?: string;
+}
+
 export interface Profile {
   name: string;
   email: string;
   phone: string;
   location: string;
   summary: string;
+  social: Social;
 }
 
 export interface EducationItem {
